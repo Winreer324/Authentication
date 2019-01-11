@@ -1,9 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
 // Google provider
 import 'package:google_sign_in/google_sign_in.dart';
+
 // Facebook provider
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
+
+// Twitter provider
+import 'package:flutter_twitter_login/flutter_twitter_login.dart';
+import 'package:leadning_firebase_raja/authentication_with_phone.dart';
+
 
 class LoginPage extends StatefulWidget {
   @override
@@ -19,6 +26,12 @@ class _LoginPageState extends State<LoginPage> {
 
 //  facebook sing
   FacebookLogin fbLogin = FacebookLogin();
+
+//  twitter sing
+//  var twitterLogin = TwitterLogin(
+//    consumerKey: "",
+//    consumerSecret: ""
+//  );
 
   @override
   Widget build(BuildContext context) {
@@ -61,6 +74,46 @@ class _LoginPageState extends State<LoginPage> {
                   }).catchError((e) {
                     print(e);
                   });
+                },
+              ),
+              SizedBox(height: 20.0),
+              RaisedButton(
+                child: Text('Login with Phone'),
+                color: Colors.blue,
+                textColor: Colors.white,
+                elevation: 7.0,
+                onPressed: () {
+//                    Navigator.of(context).pushReplacementNamed('/phonepage');
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => AuthenticationWithPhone()));
+                },
+              ),
+              SizedBox(height: 20.0),
+              RaisedButton(
+                child: Text('Login with Twitter'),
+                color: Colors.blue,
+                textColor: Colors.white,
+                elevation: 7.0,
+                onPressed: () {
+//                  twitterLogin.authorize().then((result){
+//                    switch(result.status){
+//                      case TwitterLoginStatus.cancelledByUser:print("Canselled by you");break;
+//                      case TwitterLoginStatus.error:print("Error");break;
+//                      case TwitterLoginStatus.loggedIn:
+//                        FirebaseAuth.instance.signInWithTwitter(
+//                            authToken: result.session.token,
+//                            authTokenSecret: result.session.secret
+//                        ).then((signedInUser){
+//                          Navigator
+//                              .of(context)
+//                              .pushReplacementNamed("/homepage");
+//                        }).catchError((e){
+//                          print(e);
+//                        });
+//                        break;
+//                    }
+//                  }).catchError((e){
+//                    print(e);
+//                  });
                 },
               ),
               SizedBox(height: 20.0),

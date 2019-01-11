@@ -7,6 +7,25 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String uid = "";
+
+  getUid(){
+
+  }
+
+  @override
+  void initState() {
+    this.uid = "";
+    FirebaseAuth.instance.currentUser().then((value){
+      setState(() {
+        this.uid = value.uid;
+      });
+    }).catchError((e){
+      print(e);
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,19 +36,20 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: Container(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("You are now logged in"),
+              Text("You are now logged in as ${this.uid} "),
               SizedBox(height: 15,),
               OutlineButton(
                 borderSide: BorderSide(
-                  color: Colors.red,
+                  color: Colors.indigo,
                   style: BorderStyle.solid,
                   width: 4,
                 ),
-                child: Text("LogOut"),
+                child: Text("Logout"),
                 onPressed: (){
-                  FirebaseAuth.instance.signOut().then((value){
+                  FirebaseAuth.instance.signOut().then((action){
                     Navigator.of(context).pushReplacementNamed("/landingpage");
                   }).catchError((e){
                     print(e);

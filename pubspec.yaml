@@ -21,6 +21,8 @@ dependencies:
   google_sign_in:
 #  facebook in
   flutter_facebook_login:
+#  twitter in
+  flutter_twitter_login:
 
   flutter:
     sdk: flutter
