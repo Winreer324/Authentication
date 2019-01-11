@@ -13,9 +13,14 @@ environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
 
 dependencies:
+# auth email
   firebase_auth:
+# connect with crud base
   cloud_firestore:
+#  google in app
   google_sign_in:
+#  facebook in
+  flutter_facebook_login:
 
   flutter:
     sdk: flutter

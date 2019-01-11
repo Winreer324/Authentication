@@ -17,6 +17,8 @@ void main() => runApp(Authentication());
 //lessons 25
 // Flutter - Social Authentication with Facebook
 //link video https://www.youtube.com/watch?v=XxZLHP0fGwk&list=PLgGjX33Qsw-EMsLf8TmsYhKOCx2ALZiKi&index=34
+// create app connect https://developers.facebook.com/apps/817802511897948/fb-login/quickstart/
+// problem get hash key......
 
 class Authentication extends StatelessWidget {
   @override
