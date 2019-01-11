@@ -1,6 +1,7 @@
-# leadning_firebase_raja
+# Firebase
 
 A new Flutter application.
+Lessons Raja Yogan
 
 ## Getting Started
 
