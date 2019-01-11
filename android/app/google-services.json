@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "382570541588",
+    "firebase_url": "https://authentication-zlobin.firebaseio.com",
+    "project_id": "authentication-zlobin",
+    "storage_bucket": "authentication-zlobin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382570541588:android:1c32f1cb8f196ae0",
+        "android_client_info": {
+          "package_name": "com.example.leadningfirebaseraja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382570541588-4po1hcaii5f6k1f8f7qqat9odsh0luvc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmdCNp_AIh3ro3hJvpIPkSeUX2mQos49k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
