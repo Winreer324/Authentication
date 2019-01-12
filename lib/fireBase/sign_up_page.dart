@@ -15,7 +15,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       body: Center(
         child: Container(
           padding: EdgeInsets.all(25.0),
